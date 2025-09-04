@@ -1,0 +1,67 @@
+id,name,city,abbreviation,conference
+1, Night Owls, New Jersey, NJY, East
+2, Rulers, New York, NYC, East
+3, Prowlers, Philadelphia, PHL, East
+4, Gods, Richmond, RCH, East
+5, Cannons, Norfolk, NOR, East
+6, Framers, District of Columbia, DC, East
+7, Metro, Toronto, TOR, Great Lakes
+8, Terrors, Detroit, DET, Great Lakes
+9, Mayhem, Buffalo, BUF, Great Lakes
+10, Nails, Cleveland, CLE, Great Lakes
+11, Swords, Toledo, TOL, Great Lakes
+12, Forgers, Pittsburgh, PIT, Great Lakes
+13, Twisters, Wichita, WIC, Great Plains
+14, Defenders, Tulsa, TUL, Great Plains
+15, Drillers, Houston, HOU, Great Plains
+16, Stampede, San Antonio, SAS, Great Plains
+17, Tornados, Dallas, DAL, Great Plains
+18, Bison, Austin, AUS, Great Plains
+19, Wardens, Chicago, CHI, Midwest
+20, Freighters, Minneapolis, MIN, Midwest
+21, Chasers, Kansas City, KCK, Midwest
+22, Archers, Saint Louis, STL, Midwest
+23, Explorers, Omaha, OMA, Midwest
+24, Crushers, Milwaukee, MIL, Midwest
+25, Mountaineers, Montreal, MTL, New England
+26, Beavers, Ottawa, OTT, New England
+27, Guards, Boston, BOS, New England
+28, Crows, Worcester, WOR, New England
+29, Claws, Albany, ALB, New England
+30, Anchors, Providence, PRO, New England
+31, Orcas, Vancouver, VAN, Northwest
+32, Blizzards, Calgary, CAL, Northwest
+33, Wolves, Boise, BOS, Northwest
+34, Volcanos, Portland, POR, Northwest
+35, Pioneers, Salt Lake City, SLU, Northwest
+36, Lumberjacks, Seattle, SEA, Northwest
+37, Warships, Jacksonville, JAX, South
+38, Lightning, Miami, MIA, South
+39, Gliders, Orlando, ORL, South
+40, Thunders, Tampa, TAM, South
+41, Zombies, Tallahassee, TAL, South
+42, Blues, New Orleans, NOL, South
+43, Titans, Birmingham, BIR, Southeast
+44, Jumpers, Atlanta, ATL, Southeast
+45, Knights, Charlotte, CHA, Southeast
+46, Phantoms, Raleigh, RAL, Southeast
+47, Pharohs, Memphis, MEM, Southeast
+48, Strings, Nashville, NAS, Southeast
+49, Rattlers, Tulsa, TUL, Southwest
+50, Vortex, Phoenix, PHO, Southwest
+51, Peaks, Denver, DEN, Southwest
+52, Rollers, Las Vegas, LAS, Southwest
+53, Meteors, Albuquerque, ALB, Southwest
+54, Skulls, El Paso, ELP, Southwest
+55, Turbo, Indianapolis, IND, Valley
+56, Appleseeds, Fort Wayne, FNT, Valley
+57, Stallions, Louisville, LVL, Valley
+58, Rapids, Grand Rapids, GRR, Valley
+59, Icers, Cincinnati, CIN, Valley
+60, Flames, Columbus, COL, Valley
+61, Scythes, Bakersfield, BAK, West
+62, Bandits, Oakland, OAK, West
+63, Condors, Fresno, FRS, West
+64, Stars, Los Angeles, LAL, West
+65, Rhinos, San Diego, SAN, West
+66, Sentinels, Sacramento, SAC, West

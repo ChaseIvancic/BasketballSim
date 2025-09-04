@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play - BasketballSim</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .sim-controls {
+            margin-bottom: 30px;
+        }
+        .sim-list {
+            width: 80%;
+            max-width: 600px;
+        }
+        .sim-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+        .create-sim-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .flash-message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        .flash-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .flash-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+    </style>
+    <script>
+        function confirmDelete(simName) {
+            return confirm(`Are you sure you want to delete the simulation "${simName}"? This action cannot be undone.`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Simulation Management</h1>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash-message flash-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    
+    <div class="sim-controls">
+        <form class="create-sim-form" action="/create_sim" method="POST">
+            <input type="text" name="sim_name" placeholder="Enter simulation name" required>
+            <button type="submit">Create Simulation</button>
+        </form>
+    </div>
+
+    <div class="sim-list">
+        <h2>Your Simulations</h2>
+        {% if simulations %}
+            {% for sim in simulations %}
+            <div class="sim-item">
+                <span>{{ sim }}</span>
+                <div class="button-group">
+                    <button onclick="window.location.href='/play_sim/{{ sim }}'" style="background-color: #28a745;">Play</button>
+                    <button onclick="if(confirmDelete('{{ sim }}')) window.location.href='/delete_sim/{{ sim }}'" style="background-color: #dc3545;">Delete</button>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>No simulations created yet.</p>
+        {% endif %}
+    </div>
+
+    <div style="margin-top: 20px;">
+        <button onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>

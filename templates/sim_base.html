@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ sim_name }} - BasketballSim</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        .banner-top {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .back-img {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        .sim-name-date {
+            display: flex;
+            flex-direction: column;
+        }
+        .sim-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .sim-date {
+            font-size: 14px;
+            color: #bdc3c7;
+            margin: 5px 0 0 0;
+        }
+        .sim-nav {
+            margin-top: 10px;
+            display: flex;
+            gap: 20px;
+        }
+        .sim-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: border 0.2s;
+        }
+        .sim-nav a.active {
+            border-bottom: 2px solid #4CAF50;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-top">
+            <a href="/play"><img src="{{ url_for('static', filename='img/back.png') }}" alt="Back" class="back-img" title="Back to Selection"></a>
+            <div class="sim-name-date">
+                <h1 class="sim-name">{{ sim_name }}</h1>
+                <p class="sim-date">{{ current_date }}</p>
+            </div>
+        </div>
+        <nav class="sim-nav">
+            <a href="{{ url_for('play_sim', sim_name=sim_name) }}" class="{% if active_page == 'home' %}active{% endif %}">Home</a>
+            <a href="{{ url_for('simulate_sim', sim_name=sim_name) }}" class="{% if active_page == 'simulate' %}active{% endif %}">Simulate</a>
+            <a href="{{ url_for('news_sim', sim_name=sim_name) }}" class="{% if active_page == 'news' %}active{% endif %}">News</a>
+            <a href="{{ url_for('stats_sim', sim_name=sim_name) }}" class="{% if active_page == 'stats' %}active{% endif %}">Stats</a>
+            <a href="{{ url_for('rosters_sim', sim_name=sim_name) }}" class="{% if active_page == 'rosters' %}active{% endif %}">Rosters</a>
+        </nav>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html> 

@@ -131,4 +131,3 @@ dmypy.json
 # Project specific
 basketball.db
 *.db
-sims/
